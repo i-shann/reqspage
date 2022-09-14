@@ -1,0 +1,298 @@
+html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    color: #a0a5a8;
+  }
+  a {
+    font-family: 'Raleway', sans-serif;
+  }
+  span {
+    margin: 1rem;
+  }
+  
+  .header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Antonio', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  .title-inner {
+    flex-grow: 1;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+  .bg {
+    background-image: url(./assets/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+  }
+  /* .bg-fx {
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: #ffc30f7d;
+    overflow: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 0;
+  } */
+  .box {
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 28px 28px 56px #bebebe, -28px -28px 56px #ffffff;
+  }
+  .top-bar {
+    margin: 0px;
+    backdrop-filter: blur(20px);
+    background-color: #ffc20f;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    height: 100px;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #282828;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    top: 0;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .main {
+    transition: margin-left 0.5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  /* Neuromophism */
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  /* Generic */
+  
+  /**/
+  .parent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+  .main-1 {
+    position: sticky;
+    width: 1000px;
+    height: 600px;
+    min-width: 1000px;
+    min-height: 600px;
+    padding: 25px;
+    background-color: #ecf0f3;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  @media (max-width: 1200px) {
+    .main-1 {
+      transform: scale(0.7);
+    }
+  }
+  @media (max-width: 1000px) {
+    .main-1 {
+      transform: scale(0.6);
+    }
+  }
+  @media (max-width: 800px) {
+    .main-1 {
+      transform: scale(0.5);
+    }
+  }
+  @media (max-width: 600px) {
+    .main-1 {
+      transform: scale(0.4);
+    }
+  }
+  .container
+{
+  margin:20px 100px;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container h1
+{
+  color: #ffc20f;
+}
+.container .tab
+{
+  position: relative;
+  background: #e0e0e0;
+  padding: 0 20px 20px;
+  box-shadow: 0 15px 25px rgba(red, green, blue, alpha);
+  border-radius: 5px;
+  overflow: hidden;
+} 
+.container .tab input
+{
+  appearance: none;
+}
+.container .tab label
+{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.container .tab label::after
+{
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 2em;
+  color: rgb(0, 0, 0);
+  transition: transform 1s;
+
+}
+.container .tab:hover label::after
+{
+  color: #ffc20f;
+}
+.container .tab input:checked ~ label::after
+{
+  transform: rotate(135deg);
+  color: #282828;
+}
+.container .tab label h2
+{
+  width: 160px;
+  height: 20px;
+  background: #ffc20f;
+  display: flex;
+  justify-content: center;
+  color: #ecf0f3;
+  font-size: 1.25em;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.container .tab input:checked ~ label h2
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffc20f;
+  font-size: 5em;
+  justify-content: flex-end;
+  padding: 10px;
+
+
+}
+.container .tab:nth-child(2) label h2
+{
+  background: linear-gradient(135deg, rgba(183, 174, 36, 0.867),#ffc20f );
+}
+.container .tab:nth-child(3) label h2
+{
+  background: linear-gradient(135deg, rgba(183, 174, 36, 0.867),#ffc20f);
+}
+.container .tab:nth-child(4) label h2
+{
+  background: linear-gradient(135deg,rgba(183, 174, 36, 0.867),#ffc20f);
+}
+.container .tab:nth-child(5) label h2
+{
+  background: linear-gradient(135deg,rgba(183, 174, 36, 0.867),#ffc20f)
+}
+.container .tab label h3
+{
+  position: relative;
+  font-weight:   500;
+  color: rgb(0, 0, 0);
+  z-index: 10;
+
+}
+.container .tab input:checked ~ label h3
+{
+  background: white;
+  padding: 2px 10px;
+  color: #000000;
+  border-radius: 2px;
+}
+.container .tab .content
+{
+  max-height: 0;
+  transform-origin: 1s;
+  overflow: hidden;
+}
+.container .tab input:checked ~ .content
+{
+  max-height: 100vh;
+
+}
+.container .tab .content p
+{
+  position: relative;
+  padding: 10px 0;
+  color: #050402;
+}
+.container .tab .content ul
+{
+  position: relative;
+  padding: 10px 0;
+  color: #ffffff;
+}
+.container .tab .content li
+{
+  position: relative;
+  padding: 10px 0;
+  color: #ffffff;
+  list-style-type: circle;
+
+}
